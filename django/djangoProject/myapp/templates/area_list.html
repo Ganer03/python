@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}<title>Список областей</title>{% endblock %}
+</head>
+<body>
+{% block content %}
+    <h1>Список областей</h1>
+    <ul>
+        {% for area in areas %}
+        <li><a href="{% url 'area_detail' area.id %}">{{ area.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+{% block title %}<title>Главная страница</title>{% endblock %}
+</head>
+<body>
+{% block content %}
+    <h1>Список дел</h1>
+    <ul>
+        {% for case in cases %}
+            <li><a href="{% url 'case_detail' case.id %}">{{ case.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+</body>
+</html>

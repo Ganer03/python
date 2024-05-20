@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}<title>Детали дела</title>{% endblock %}
+</head>
+<body>
+{% block content %}
+    <h1>{{ case.title }}</h1>
+    <p>{{ case.description }}</p>
+    <a href="{% url 'update_case' case.id %}">Редактировать</a>
+    <!-- Данные из связанной модели Area -->
+    <h2>Область: {{ area.name }}</h2>
+    <p>{{ area.description }}</p>
+    <!-- Данные из связанной модели Client -->
+    <h2>Клиент: {{ client.name }}</h2>
+    <p>Email: {{ client.email }}</p>
+{% endblock %}
+</body>
+</html>

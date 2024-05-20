@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}<title>Подробная информация о клиенте</title>{% endblock %}
+
+</head>
+<body>
+{% block content %}
+    <h1>Подробная информация о клиенте</h1>
+    <p><strong>Имя:</strong> {{ client.name }}</p>
+    <p><strong>Email:</strong> {{ client.email }}</p>
+    <p><strong>Дело:</strong> {{ client.case }}</p>
+    <p><strong>Область:</strong> {{ client.case.area }}</p>
+    <a href="{% url 'update_client' client.id %}">Изменить</a>
+{% endblock %}
+</body>
+</html>

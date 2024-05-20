@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<div style="margin: auto; width: 450px">
+    <form method="post" class="main_form">
+        <input type="hidden" name="csrfmiddlewaretoken"
+               value="yYZzuBweZFXaunOfXSsrV1Newg0HQ7RRYLDC6l29xRpG479BiozXEHSU37hh6Hcp">
+        <div class="form">
+            <div class="styles_tabs">
+                <a class="styles_tab styles_activeTab" href="?subscription=false">Разовые</a>
+                <a class="styles_tab" href="?subscription=true">Подписка</a>
+            </div>
+
+
+            <div id="div_id_chanel" class="control-group"><label for="id_chanel" class="control-label requiredField">
+                Канал<span class="asteriskField">*</span> </label>
+                <div class="controls"><input type="text" name="chanel" maxlength="120" class="textinput textInput"
+                                             required id="id_chanel"></div>
+            </div>
+            <div id="div_id_count" class="control-group"><label for="id_count" class="control-label requiredField">
+                Объем<span class="asteriskField">*</span> </label>
+                <div class="controls"><input type="number" name="count" min="0" class="numberinput" required
+                                             id="id_count"></div>
+            </div>
+            <div id="div_id_count_last_posts" class="control-group"><label for="id_count_last_posts"
+                                                                           class="control-label requiredField">
+                Кол-во последних постов<span class="asteriskField">*</span> </label>
+                <div class="controls"><input type="number" name="count_last_posts" min="0" class="numberinput" required
+                                             id="id_count_last_posts"></div>
+            </div>
+            <div id="div_id_task_duration" class="control-group"><label for="id_task_duration"
+                                                                        class="control-label requiredField">
+                Продолжительность услуги<span class="asteriskField">*</span> </label>
+                <div class="controls"><input type="number" name="task_duration" min="0" class="numberinput" required
+                                             id="id_task_duration"></div>
+            </div>
+            <div id="div_id_begin_time" class="control-group"><label for="id_begin_time"
+                                                                     class="control-label requiredField">
+                Begin time<span class="asteriskField">*</span> </label>
+                <div class="controls"><input type="datetime-local" name="begin_time" class="textinput textInput"
+                                             required id="id_begin_time"></div>
+            </div>
+            <div id="div_id_max_speed" class="control-group">
+                <div class="controls"><label for="id_max_speed" class="checkbox "> <input type="checkbox"
+                                                                                          name="max_speed"
+                                                                                          class="checkboxinput"
+                                                                                          id="id_max_speed">
+                    Максимальная скорость
+                </label></div>
+            </div>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Подтвердить</button>
+    </form>
+</div>
+</body>
+</html>

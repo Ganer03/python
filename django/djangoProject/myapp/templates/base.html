@@ -1,0 +1,71 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}MyApp{% endblock %}</title>
+    <style>
+        /* Простой стиль для header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url 'area_list' %}">Области</a>
+                    <ul>
+                        <li><a href="{% url 'area_list' %}">Список областей</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{% url 'index' %}">Дела</a>
+                    <ul>
+                        <li><a href="{% url 'index' %}">Список дел</a></li>
+                        <li><a href="{% url 'create_case' %}">Создать новое дело</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{% url 'client_list' %}">Клиенты</a>
+                    <ul>
+                        <li><a href="{% url 'client_list' %}">Список клиентов</a></li>
+                        <li><a href="{% url 'create_client' %}">Добавить нового клиента</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

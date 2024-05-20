@@ -1,0 +1,18 @@
+[
+    {
+        "model": "myapp.area",
+        "pk": 1,
+        "fields": {
+            "name": "Area 1",
+            "description": "Description of Area 1"
+        }
+    },
+    {
+        "model": "myapp.area",
+        "pk": 2,
+        "fields": {
+            "name": "Area 2",
+            "description": "Description of Area 2"
+        }
+    }
+]

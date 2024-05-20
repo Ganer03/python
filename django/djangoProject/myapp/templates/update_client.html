@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}<title>Редактирование информации о клиенте</title>{% endblock %}
+</head>
+<body>
+{% block content %}
+    <h1>Редактирование информации о клиенте</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Сохранить</button>
+    </form>
+{% endblock %}
+</body>
+</html>

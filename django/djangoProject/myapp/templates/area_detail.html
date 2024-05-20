@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+{% block title %}<title>Карточка области</title>{% endblock %}
+</head>
+<body>
+{% block content %}
+    <h1>Карточка области "{{ area.name }}"</h1>
+    <h2>Список дел:</h2>
+    <ul>
+        {% for case in area.case_set.all %}
+        <li>
+            <strong>Дело: </strong>{{ case.title }}
+            <ul>
+                {% for client in case.client_set.all %}
+                <li>{{ client.name }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+</body>
+</html>
